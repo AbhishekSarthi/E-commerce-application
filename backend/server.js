@@ -14,10 +14,10 @@ app.get('/api', (req, res) => {
 });
 const port = process.env.PORT || 5000;
 
-// app.use(express.static(path.join(__dirname, '../client/build')));
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/build'));
-// });
+app.use(express.static(path.join(__dirname, '../client/build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build'));
+});
 
 mongoose.connect(
     'mongodb+srv://t-hub:vsqqlsaT7d1yTFXg@cluster0.hqba7.mongodb.net/t-hub?retryWrites=true&w=majority',

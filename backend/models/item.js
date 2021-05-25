@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// HOW DATA IS FORMATTED IN MONGODB
 const itemSchema = mongoose.Schema({
     title: {
         type: String,

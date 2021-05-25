@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Items = () => {
-    const [item, setItem] = useState([]);
+    const [data, setItem] = useState([]);
 
     useEffect(() => {
         const getDetails = async () => {
             const { data } = await axios.get('/api/post');
             setItem(data);
-            // console.log(item);
             console.log(data);
         };
 
